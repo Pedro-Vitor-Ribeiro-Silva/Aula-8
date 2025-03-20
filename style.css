@@ -1,179 +1,128 @@
 :root {
-    --primary-color: #ff1744;
-    --secondary-color: #ff4081;
-    --background-start: #000000;
-    --background-end: #1a1a1a;
-    --card-bg: rgba(33, 37, 41, 0.9);
-    --text-color: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.7);
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --dark-bg: #121212;
+  --card-bg: #1E1E1E;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  background-color: var(--card-bg);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color) !important;
+}
+
+.clock {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Inter', monospace;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.hero {
+  background: linear-gradient(45deg, var(--dark-bg), var(--card-bg));
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.icon-wrapper {
+  font-size: 2rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+      padding: 3rem 0;
   }
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, var(--background-start), var(--background-end));
-    min-height: 100vh;
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  #app {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 4rem;
-    padding: 2rem 0;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(255, 23, 68, 0.3);
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-  }
-  
-  .calculators-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
-  
-  .calculator-card {
-    background: var(--card-bg);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-  }
-  
-  .calculator-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: 0.5s;
-  }
-  
-  .calculator-card:hover::before {
-    left: 100%;
-  }
-  
-  .calculator-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 45px rgba(255, 23, 68, 0.2);
-  }
-  
-  .card-content {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .icon {
-    font-size: 3rem;
-    margin: 1rem 0;
-    transition: transform 0.3s ease;
-  }
-  
-  .calculator-card:hover .icon {
-    transform: scale(1.2);
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: var(--primary-color);
-  }
-  
-  p {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-  }
-  
-  .access-btn {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .access-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 23, 68, 0.4);
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  .calculator-card {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .calculator-card:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  .calculator-card:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-  
-  .calculator-card:nth-child(4) {
-    animation-delay: 0.6s;
-  }
-  
-  @media (max-width: 768px) {
-    #app {
-      padding: 1rem;
-    }
-  
-    header {
-      margin-bottom: 2rem;
-    }
-  
-    header h1 {
+  .hero h1 {
       font-size: 2rem;
-    }
-  
-    .calculators-grid {
-      grid-template-columns: 1fr;
-    }
   }
+  
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .clock {
+      font-size: 1rem;
+      padding: 0.3rem 0.8rem;
+  }
+}
