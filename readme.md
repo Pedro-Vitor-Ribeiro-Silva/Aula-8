@@ -29,27 +29,28 @@ Você pode acessar a página principal do projeto [aqui](https://pedro-vitor-rib
 5.  **Resultado:** O resultado será exibido na seção "Resultado".
 
 ## Estrutura de Arquivos
+
 ```plaintext
-Calculadoras-Trabalhistas-Pro/
+Calculadoras-RH/
 ├── readme.md # Este arquivo
 ├── style.css # Estilos CSS globais
 ├── index.html # Página principal com o menu de calculadoras
-├── ex0 exemplo/ # Pasta da Calculadora Padrão
-│ ├── index.html # HTML da Calculadora Padrão
-│ ├── script.js # Lógica JavaScript da Calculadora Padrão
-│ └── style.css # Estilos CSS específicos da Calculadora Padrão
+├── ex0/ # Pasta da Calculadora Padrão
+│   ├── calc.html # HTML da Calculadora Padrão
+│   ├── script.js # Lógica JavaScript da Calculadora Padrão
+│   └── style.css # Estilos CSS específicos da Calculadora Padrão
 ├── ex1/ # Pasta da Calculadora de Horas Extras
-│ ├── index.html # HTML da Calculadora de Horas Extras
-│ ├── script.js # Lógica JavaScript da Calculadora de Horas Extras
-│ └── style.css # Estilos CSS específicos da Calculadora de Horas Extras
+│   ├── calchoraextra.html # HTML da Calculadora de Horas Extras
+│   ├── script.js # Lógica JavaScript da Calculadora de Horas Extras
+│   └── style.css # Estilos CSS específicos da Calculadora de Horas Extras
 ├── ex2/ # Pasta da Calculadora de Aumento Salarial
-│ ├── index.html # HTML da Calculadora de Aumento Salarial
-│ ├── script.js # Lógica JavaScript da Calculadora de Aumento Salarial
-│ └── style.css # Estilos CSS específicos da Calculadora de Aumento Salarial
+│   ├── calcsalario.html # HTML da Calculadora de Aumento Salarial
+│   ├── script.js # Lógica JavaScript da Calculadora de Aumento Salarial
+│   └── style.css # Estilos CSS específicos da Calculadora de Aumento Salarial
 └── ex3/ # Pasta da Calculadora de Transporte
-├── index.html # HTML da Calculadora de Transporte
-├── script.js # Lógica JavaScript da Calculadora de Transporte
-└── style.css # Estilos CSS específicos da Calculadora de Transporte
+    ├── calctransporte.html # HTML da Calculadora de Transporte
+    ├── script.js # Lógica JavaScript da Calculadora de Transporte
+    └── style.css # Estilos CSS específicos da Calculadora de Transporte
 ```
 
 ## Tecnologias Utilizadas
